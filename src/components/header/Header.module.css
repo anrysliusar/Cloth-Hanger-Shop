@@ -1,21 +1,43 @@
-.header {
-    background-color: #61dafb;
+.header{
+    color: white;
+    background-color: #494949;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.headerRightSideBlock img{
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    width: 40px;
+}
+
+.blockLogo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .mainTitle {
-    background-color: #fb6161;
-
-}
-.underTitle {
-    background-color: #51fd08;
+    display: flex;
+    font-family: "Droid Sans", serif;
 
 }
 
-.savedItems {
-    background-color: #fdc808;
+.navIcon{
+    margin: 20px;
+    background-color: #ffffff;
+    height: 40px;
+    width: 60px;
 
 }
 
-.savedItem {
-    background-color: #c808fd;
-
+.logoIcon{
+    padding-top: 10px;
+    padding-right: 5px;
+    height: 45px;
+    width: 80px;
 }
+

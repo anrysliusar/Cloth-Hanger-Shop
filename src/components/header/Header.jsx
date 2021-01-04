@@ -1,33 +1,26 @@
 import React from 'react'
-import menuIcon from './menu-icon.jpg'
-import logo from './logo.jpg'
+import navIcon from './images/navicon.png'
+import logoIcon from './images/logo.png'
+import accountIcon from './images/user_account_icon.png'
+import wishListIcon from './images/wish_list_icon.png'
+import cartListIcon from './images/shopping-cart-icon.png'
 import classes from './Header.module.css'
 
 
 const Header = () =>{
-    return <header>
-        <img src={menuIcon} alt="menu"/>
-        <img src={logo} alt="cloth-hanger"/>
+    return <header className={classes.header}>
+            {/*link to NavbarCategory*/}
+            <img src={navIcon} alt="menu" className={classes.navIcon}/>
 
-        <h1 className={classes.mainTitle}>Cloth-Hanger</h1>
-        <h3 className={classes.underTitle}>Stylish clothing store</h3>
-        <nav className="header-menu">
-            <div className={classes.savedItems}>
-                <a href="#" className={classes.savedItem}>Account</a>
-                <a href="#" className={classes.savedItem}>WishList</a>
-                <a href="#" className={classes.savedItem}>Shopping cart</a>
+            <div className={classes.blockLogo}>
+                <img src={logoIcon} alt="clothes hanger" className={classes.logoIcon}/>
+                <h1 className={classes.mainTitle}>Cloth-Hanger</h1>
             </div>
-
-            {/*<div><a className="nav-item" href="#">Економіка</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Життя</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Європа</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Форум</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Блоги</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Історична правда</a></div>*/}
-            {/*<div><a className="nav-item" href="#">ТаблоID</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Доступ</a></div>*/}
-            {/*<div><a className="nav-item" href="#">Правда SOS</a></div>*/}
-        </nav>
+            <div className={classes.headerRightSideBlock}>
+                <img src={wishListIcon} alt="" />
+                <img src={cartListIcon} alt="" />
+                <img src={accountIcon} alt="" />
+            </div>
     </header>
 
 
