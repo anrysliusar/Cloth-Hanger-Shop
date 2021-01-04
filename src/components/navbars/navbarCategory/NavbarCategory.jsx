@@ -1,12 +1,22 @@
 import React from 'react'
 import classes from './NavbarCategory.module.css'
+import {Switch, Route, NavLink} from 'react-router-dom'
+import Coat from "../../categories/coats/Coat";
+import Shoe from "../../categories/shoes/Shoe";
+import Shirt from "../../categories/shirts/Shirt";
+import Jeans from "../../categories/jeans/Jeans";
+
 
 const NavbarCategory = () => {
     return <div className={classes.category}>
-        <div className={classes.categoryItem}>Shirt</div>
-        <div className={classes.categoryItem}>Shoes,</div>
-        <div className={classes.categoryItem}>Jeans</div>
-        <div className={classes.categoryItem}>Coat</div>
+        <ul>
+            <li className={classes.categoryItem}><NavLink to={'/coats'} activeClassName={classes.activeLink} >Coats</NavLink></li>
+            <li className={classes.categoryItem}><NavLink to={'/shirts'} activeClassName={classes.activeLink}>Shirts</NavLink></li>
+            <li className={classes.categoryItem}><NavLink to={'/shoes'} activeClassName={classes.activeLink}>Shoes</NavLink></li>
+            <li className={classes.categoryItem}><NavLink to={'/jeans'} activeClassName={classes.activeLink}>Jeans</NavLink></li>
+        </ul>
+
+
     </div>
 }
 
