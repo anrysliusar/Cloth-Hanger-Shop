@@ -1,0 +1,10 @@
+.wrapper{
+    height: 1000px;
+    width: 100%;
+
+}
+
+.mainBlock {
+    display: flex;
+    flex-direction: row;
+}
