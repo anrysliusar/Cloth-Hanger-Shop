@@ -5,7 +5,27 @@
     background-color: #a9a9a9;
 }
 
-.categoryItem {
+
+
+.categoryItem a{
+    color: #282c34;
     margin: 10px;
     font-size: 20px;
+    text-decoration: none;
+
+}
+.categoryItem a.activeLink {
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+
+
+
+}
+
+.category ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
 }
