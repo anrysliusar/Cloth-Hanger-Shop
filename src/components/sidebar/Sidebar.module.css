@@ -1,0 +1,17 @@
+.sidebar {
+    height: 1000px;
+    width: 15%;
+    background-color: #d2d0d0;
+}
+.formCheckbox{
+    display: flex;
+    flex-direction: column;
+}
+.filterSize ul{
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+}
+.titleForm {
+    margin: 5px;
+}
