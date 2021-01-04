@@ -1,0 +1,11 @@
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #a9a9a9;
+}
+
+.categoryItem {
+    margin: 10px;
+    font-size: 20px;
+}
