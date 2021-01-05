@@ -1,10 +1,14 @@
 import React from 'react'
 import classes from './Coat.module.css'
+import {NavLink, withRouter} from "react-router-dom";
 
-const Coat = () =>{
-    return <div className={classes.content}>
-        <h3 className={classes.title}>Coat</h3>
+const Coat = ({product: product, match: {url} }) =>{
+    return <div>
+        <h3>Coat</h3>
+        <div>
+            { product.title} - <NavLink to={`${url}/${product.id}`}>details</NavLink>
+        </div>
     </div>
 }
 
-export default Coat
+export default withRouter(Coat)
