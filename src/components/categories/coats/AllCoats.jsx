@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import ProductServices from "../../../services/ProductService";
-import User from "./Coat";
+
 
 import {
     Route
@@ -23,6 +23,8 @@ class AllCoats extends Component {
         let {match: {url}} = this.props
         return (
             <div>
+                <h3>Coats</h3>
+
                 {
                     products.map(product => <Coat product={product} key={product.id}/>)
                 }
