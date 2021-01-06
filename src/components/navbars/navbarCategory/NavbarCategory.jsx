@@ -4,7 +4,7 @@ import {Switch, Route, NavLink} from 'react-router-dom'
 import Coat from "../../categories/coats/Coat";
 import Shoe from "../../categories/shoes/Shoe";
 import Shirt from "../../categories/shirts/Shirt";
-import Jeans from "../../categories/jeans/Jeans";
+import JeansOne from "../../categories/jeans/JeansOne";
 
 
 const NavbarCategory = () => {
