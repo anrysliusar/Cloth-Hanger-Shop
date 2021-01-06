@@ -1,2 +1,1 @@
-Simple clothing shop created using React
-
+Simple clothing store created with React
