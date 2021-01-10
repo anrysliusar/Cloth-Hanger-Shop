@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ProductServices from "../../../services/ProductService";
-import Coat from "./Coat";
+import ProductServices from "../../../../services/ProductService";
+import Coat from "../Coat/Coat";
 import classes from './AllCoat.module.css'
 
 
