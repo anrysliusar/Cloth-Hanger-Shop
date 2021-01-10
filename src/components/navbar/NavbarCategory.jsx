@@ -1,10 +1,10 @@
 import React from 'react'
 import classes from './NavbarCategory.module.css'
 import {Switch, Route, NavLink} from 'react-router-dom'
-import Coat from "../../categories/coats/Coat";
-import Shoe from "../../categories/shoes/Shoe";
-import Shirt from "../../categories/shirts/Shirt";
-import JeansOne from "../../categories/jeans/JeansOne";
+import Coat from "../categories/coats/Coat";
+import Shoe from "../categories/shoes/Shoe";
+import Shirt from "../categories/shirts/Shirt";
+import JeansOne from "../categories/jeans/JeansOne";
 
 
 const NavbarCategory = () => {

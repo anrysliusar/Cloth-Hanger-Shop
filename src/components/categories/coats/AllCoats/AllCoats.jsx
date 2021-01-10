@@ -1,12 +1,8 @@
 import React, {Component} from 'react';
 import ProductServices from "../../../services/ProductService";
-
-
-import {
-    Route
-} from 'react-router-dom'
-import FullCoat from "./FullCoat";
 import Coat from "./Coat";
+import classes from './AllCoat.module.css'
+
 
 class AllCoats extends Component {
 
@@ -20,23 +16,19 @@ class AllCoats extends Component {
 
     render() {
         let {products} = this.state
-        let {match: {url}} = this.props
         return (
             <div>
                 <h3>Coats</h3>
 
+                <div className={classes.listItems}>
                 {
-                    products.map(product => <Coat product={product} key={product.id}/>)
+                    products.map(product => <Coat
+                        product={product}
+                        key={product.id}/>)
                 }
-                <hr/>
-                <div>
-                    <Route path={`${url}/:id`} render={(props) => {
-
-                        let {match: {params: {id}}} = props
-
-                        return <FullCoat key={id} id={id}/>
-                    }}/>
                 </div>
+
+                <hr/>
             </div>
         );
     }
