@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Header from "./components/header/Header";
 import classes from './styles.module.css'
-import NavbarGender from "./components/navbars/navbarGender/NavbarGender";
-import NavbarCategory from "./components/navbars/navbarCategory/NavbarCategory";
+import NavbarCategory from "./components/navbar/NavbarCategory";
 import Sidebar from "./components/sidebar/Sidebar";
 import Content from "./components/content/Content";
 import {BrowserRouter} from "react-router-dom";
@@ -13,7 +12,6 @@ class App extends Component {
             <BrowserRouter>
                 <div className={classes.wrapper}>
                     <Header/>
-                    {/*<NavbarGender/>*/}
                     <NavbarCategory/>
                     <div className={classes.mainBlock}>
                         <Sidebar/>
