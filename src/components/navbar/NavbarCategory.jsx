@@ -1,13 +1,9 @@
 import React from 'react'
 import classes from './NavbarCategory.module.css'
-import {Switch, Route, NavLink} from 'react-router-dom'
-import Coat from "../categories/coats/Coat";
-import Shoe from "../categories/shoes/Shoe";
-import Shirt from "../categories/shirts/Shirt";
-import JeansOne from "../categories/jeans/JeansOne";
+import {NavLink} from 'react-router-dom'
 
 
-const NavbarCategory = () => {
+const NavbarCategory = (props) => {
     return <div className={classes.category}>
         <ul>
             <li className={classes.categoryItem}><NavLink to={'/coats'} activeClassName={classes.activeLink} >Coats</NavLink></li>
