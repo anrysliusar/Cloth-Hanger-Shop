@@ -5,11 +5,16 @@ import accountIcon from './images/user_account_icon.png'
 import wishListIcon from './images/wish_list_icon.png'
 import cartListIcon from './images/shopping-cart-icon.png'
 import classes from './Header.module.css'
+import {useSelector} from 'react-redux'
+import {NavLink} from "react-router-dom";
 
 
-const Header = () =>{
+
+const Header = (props) =>{
+    const {wishlist, cart} = useSelector(({wishlist: {wishlist}, cart: {cart}}) => ({wishlist, cart}))
+
     return <header className={classes.header}>
-            {/*link to NavbarCategory*/}
+
             <img src={navIcon} alt="menu" className={classes.navIcon}/>
 
             <div className={classes.blockLogo}>
@@ -17,13 +22,24 @@ const Header = () =>{
                 <h1 className={classes.mainTitle}>Cloth-Hanger</h1>
             </div>
             <div className={classes.headerRightSideBlock}>
-                <img src={wishListIcon} alt="" />
-                <img src={cartListIcon} alt="" />
-                <img src={accountIcon} alt="" />
+                <div className={classes.headerRightSideBlockItem}>
+                    <NavLink to={'/wishlist'}>
+                        <img src={wishListIcon} alt="wishListIcon" />
+                    </NavLink>
+                    <span>{wishlist.length}</span>
+                </div>
+                <div className={classes.headerRightSideBlockItem}>
+                    <NavLink to={'/cart'}>
+                    <img src={cartListIcon} alt="cartListIcon" />
+                    </NavLink>
+                    <span>{cart.length}</span>
+                </div>
+                <div className={classes.headerRightSideBlockItem}>
+                    <img src={accountIcon} alt="accountIcon" />
+
+                </div>
             </div>
     </header>
-
-
 }
 
 export default Header
