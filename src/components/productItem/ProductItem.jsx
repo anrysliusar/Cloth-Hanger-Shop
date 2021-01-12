@@ -6,15 +6,15 @@ import {addProductCart, addProductWishlist} from "../../redux/action-creators";
 
 const ProductItem = ({product: product}) =>{
     const dispatch = useDispatch()
-    let [addedCart, setAddedCart] = useState(false)
-    let [addedWishlist, setAddedWishlist] = useState(false)
+    let [isInCart, setInCart] = useState(false)
+    let [isInWishlist, setInWishlist] = useState(false)
     const addToCart = () => {
         dispatch(addProductCart(product))
-        setAddedCart(!addedCart)
+        setInCart(!isInCart)
     }
     const addToWishlist = () => {
         dispatch(addProductWishlist(product))
-        setAddedWishlist(!addedWishlist)
+        setInWishlist(!isInWishlist)
     }
     return <div>
             <div className={classes.blockItem}>
@@ -29,8 +29,8 @@ const ProductItem = ({product: product}) =>{
                         <p>{product.price}$</p>
                     </div>
                     <div>
-                        <button onClick={addToCart}>{addedCart ? "remove from cart" : "add to cart"}</button>
-                        <button onClick={addToWishlist} >{addedWishlist ? "remove from wishlist" : "add to wishlist" }</button>
+                        <button onClick={addToCart}>{isInCart ? "throw away from cart" : "to cart"}</button>
+                        <button onClick={addToWishlist} >{isInWishlist ? "throw away from wishlist" : "to wishlist" }</button>
                     </div>
 
                 </div>
