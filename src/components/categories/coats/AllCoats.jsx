@@ -1,21 +1,21 @@
 import React from 'react';
-import Coat from "../Coat/Coat";
-import classes from './AllCoat.module.css'
+import ProductItem from "../../productItem/ProductItem";
+import classes from '../../productItem/AllProducts.module.css'
+
 
 const AllCoats = (props) => {
     const products = props.products
     return (
         <div>
             <h3>Coats</h3>
+            <hr/>
             <div className={classes.listItems}>
                 {
-                    products.map(product => <Coat
+                    products.map(product => <ProductItem
                         product={product}
                         key={product.id}/>)
                 }
             </div>
-
-            <hr/>
         </div>
         );
 }
