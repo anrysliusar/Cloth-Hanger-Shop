@@ -8,15 +8,16 @@ import AllJeans from "../categories/jeans/AllJeans";
 import AllShirts from "../categories/shirts/AllShirts";
 import Cart from "../cart/Cart";
 
-const Content = (props) =>{
+const Content = () =>{
 
     return <div className={classes.content}>
         <Switch>
             <Route path={'/wishlist'} component={Wishlist}/>
             <Route path={'/cart'} component={Cart}/>
-            <Route path={'/coats'} render={() => {
-                return <AllCoats products={props.products}/>
-            }}/>
+            <Route path={'/coats'} component={AllCoats}/>
+            {/*<Route path={'/coats'} render={() => {*/}
+            {/*    return <AllCoats products={props.products}/>*/}
+            {/*}}/>*/}
             <Route path={'/shirts'} component={AllShirts}/>
             <Route path={'/shoes'} component={AllShoes}/>
             <Route path={'/jeans'} component={AllJeans}/>

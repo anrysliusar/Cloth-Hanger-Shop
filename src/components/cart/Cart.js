@@ -12,7 +12,7 @@ const Cart = () => {
             <div className={classes.listItems}>
 
                 {
-                    cartItems.map(item => <ProductItem product={item} />)
+                    cartItems.map(item => <ProductItem key={item.id} product={item} />)
                 }
 
             </div>
