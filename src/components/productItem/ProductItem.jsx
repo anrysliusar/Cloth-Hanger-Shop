@@ -6,8 +6,10 @@ import {addProductCart, addProductWishlist} from "../../redux/action-creators";
 
 const ProductItem = ({product: product}) =>{
     const dispatch = useDispatch()
-    let [isInCart, setInCart] = useState(false)
-    let [isInWishlist, setInWishlist] = useState(false)
+    // todo save initialState in store
+    let [isInCart, setInCart] = useState(null)
+    // todo save initialState in store
+    let [isInWishlist, setInWishlist] = useState(null)
     const addToCart = () => {
         dispatch(addProductCart(product))
         setInCart(!isInCart)
